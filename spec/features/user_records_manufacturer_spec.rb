@@ -28,5 +28,6 @@ feature "user records new manufacturer", %q(
 
 		expect(page).to have_content manufacturer.name
 		expect(page).to have_content manufacturer.country
+
 	end
 end
