@@ -1,5 +1,14 @@
 <h1>Manufacturers</h1>
 
+<% if @manufacturer.errors.any? %>
+	<h2>Failed to add new Manufacturer!</h2>
+	<ul>
+	<% @manufacturer.errors.full_messages.each do |error_msg| %>
+		<li><%= error_msg %></li>
+	<% end %>
+	</ul>
+<% end %>
+
 <%= form_for @manufacturer do |f| %>
 	<%= f.label :name %>
 	<%= f.text_field :name %> <br/>
